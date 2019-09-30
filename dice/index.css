@@ -1,0 +1,79 @@
+body {
+  background: black;
+}
+
+.container {
+  display: flex;
+  margin-top: 50px;
+}
+
+.items {
+  background: white;
+  width: 100px;
+  height: 100px;
+  margin-left: 30px;
+  display: flex;
+}
+
+.ball {
+  background: black;
+  border-radius: 12px;
+  width: 24px;
+  height: 24px;
+}
+
+.item1 {
+  justify-content: center;
+  align-items: center;
+}
+
+.item2 {
+  justify-content: space-between;
+}
+
+.item2 > .ball:nth-child(2) {
+  align-self: flex-end;
+}
+
+.item3 {
+  justify-content: space-between;
+}
+.item3 .ball:nth-child(2) {
+  align-self: center;
+}
+.item3 .ball:nth-child(3) {
+  align-self: flex-end;
+}
+
+.item4 {
+  align-content: space-between;
+  flex-wrap: wrap;
+}
+.item4 .line {
+  flex-basis: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.item5 {
+  flex-direction: column;
+  justify-content: space-between;
+}
+.item5 .line {
+  justify-content: space-between;
+  display: flex;
+}
+.item5 .line1 {
+  align-self: center;
+}
+
+.item6 {
+  justify-content: space-between;
+}
+.item6 .line {
+  // align-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  // flex-wrap: wrap;
+}
