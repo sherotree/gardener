@@ -2,6 +2,45 @@ body {
   background: #ccc;
 }
 
+.button {
+  display: flex;
+  margin: 20px auto;
+  width: 100px;
+}
+.button > div {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checked {
+  width: 10px;
+  height: 10px;
+  background: white;
+}
+#black {
+  background: black;
+}
+
+#pink {
+  background: pink;
+}
+
+#pinked {
+  visibility: hidden;
+}
+
+#green {
+  background: green;
+}
+
+#greened {
+  visibility: hidden;
+}
+
 ul {
   display: flex;
   background: black;
@@ -10,11 +49,18 @@ ul {
   color: white;
   margin: 20px auto;
   justify-content: space-between;
+  padding: 0;
 }
 
 li {
   display: flex;
-  width: 50px;
-  padding: 5px;
+  justify-content: center;
+  width: 15%;
+  // padding: 5px;
   border-left: 2px solid white;
+  list-style: none;
+}
+
+li:nth-child(1) {
+  border-left: none;
 }

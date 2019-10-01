@@ -6,17 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="index.css" />
     <title>Document</title>
+    <script type="text/javascript">
+      window.onload = function() {
+        let black = document.getElementById('black')
+        let pink = document.getElementById('pink')
+        let green = document.getElementById('green')
+        let body = document.getElementsByTagName('body')[0]
+        let blacked = document.getElementById('blacked')
+        let pinked = document.getElementById('pinked')
+        let greened = document.getElementById('greened')
+        let ul = document.getElementsByTagName('ul')[0]
+
+        black.onclick = function() {
+          body.style.backgroundColor = '#ccc'
+          blacked.style.visibility = 'visible'
+          pinked.style.visibility = 'hidden'
+          greened.style.visibility = 'hidden'
+          ul.style.backgroundColor = 'black'
+        }
+        pink.onclick = function() {
+          body.style.backgroundColor = 'rgb(250,210,220)'
+          blacked.style.visibility = 'hidden'
+          pinked.style.visibility = 'visible'
+          greened.style.visibility = 'hidden'
+          ul.style.backgroundColor = 'pink'
+        }
+        green.onclick = function() {
+          body.style.backgroundColor = '#9ac8a6'
+          blacked.style.visibility = 'hidden'
+          pinked.style.visibility = 'hidden'
+          greened.style.visibility = 'visible'
+          ul.style.backgroundColor = 'green'
+        }
+      }
+    </script>
   </head>
   <body>
     <div class="button">
       <div id="black">
-        <div class="checked"></div>
+        <div class="checked" id="blacked"></div>
       </div>
       <div id="pink">
-        <div class="checked"></div>
+        <div class="checked" id="pinked"></div>
       </div>
       <div id="green">
-        <div class="checked"></div>
+        <div class="checked" id="greened"></div>
       </div>
     </div>
     <div class="navigator">
