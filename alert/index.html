@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      input {
+        margin: 30px auto;
+      }
+      button {
+        cursor: pointer;
+      }
+    </style>
+    <script type="text/javascript">
+      function remind(a) {
+        alert(a.value)
+      }
+      window.onload = function() {
+        let input = document.getElementsByTagName('input')[0]
+        let button = document.getElementsByTagName('button')[0]
+        button.onclick = function() {
+          remind(input)
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div>
+      <input type="text" />
+      <button>点击</button>
+    </div>
+  </body>
+</html>
