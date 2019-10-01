@@ -1,0 +1,13 @@
+.outer {
+  margin: 10px auto;
+  width: 500px;
+  padding: 10px;
+  text-align: center;
+}
+
+#box {
+  width: 100px;
+  height: 100px;
+  background: pink;
+  margin: 30px auto;
+}
