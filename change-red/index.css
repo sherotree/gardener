@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  margin: 30px auto;
+  justify-content: center;
+}
+
+.box {
+  background: black;
+  width: 100px;
+  height: 100px;
+  margin: 15px;
+}
