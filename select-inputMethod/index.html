@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .outer {
+        margin: 30px auto;
+        width: 400px;
+      }
+
+      #list {
+        margin-top: 10px;
+        visibility: hidden;
+      }
+
+      #list div {
+        width: 50px;
+        padding: 5px;
+        /* text-align: center; */
+        color: rgb(104, 105, 206);
+        border: 1px rgb(104, 105, 206) solid;
+        /* visibility: hidden; */
+      }
+
+      #list div:nth-child(1n + 2) {
+        border-top: 0 rgb(104, 105, 206) solid;
+      }
+
+      #list div:hover {
+        background: rgb(188, 198, 230);
+      }
+    </style>
+
+    <script type="text/javascript">
+      window.onload = function() {
+        let button = document.getElementById('btn')
+        let list = document.getElementById('list')
+        let close = document.getElementById('close')
+
+        button.onclick = function() {
+          if (getComputedStyle(list).getPropertyValue('visibility') == 'hidden')
+            list.style.visibility = 'visible'
+          else list.style.visibility = 'hidden'
+        }
+
+        close.onclick = function() {
+          list.style.visibility = 'hidden'
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="outer">
+      <button id="btn">切换输入法</button>
+      <div id="list">
+        <div>拼音</div>
+        <div>手写</div>
+        <div id="close">关闭</div>
+      </div>
+    </div>
+  </body>
+</html>
