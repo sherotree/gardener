@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      #container {
+        width: 500px;
+        margin: 30px auto;
+        border: 1px solid black;
+        /* padding: 0; */
+      }
+
+      #title ul {
+        display: flex;
+        background: black;
+        color: white;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px solid black;
+      }
+
+      #title li {
+        list-style-type: none;
+        width: 80px;
+        padding: 4px;
+        text-align: center;
+        border-right: 1px solid black;
+      }
+
+      /* #title li:hover {
+        background: rgb(199, 199, 199);
+      } */
+
+      .current {
+        background: rgb(199, 199, 199);
+      }
+
+      #content ul {
+        display: none;
+      }
+    </style>
+
+    <script type="text/javascript">
+      window.onload = function() {
+        let titles = document.getElementById('title').getElementsByTagName('li')
+        let pages = document
+          .getElementById('content')
+          .getElementsByTagName('ul')
+        for (let i = 0; i < titles.length; i++) {
+          titles[i].onmousemove = function() {
+            for (let j = 0; j < pages.length; j++) {
+              titles[j].className = i === j ? 'current' : ''
+              pages[j].style.display = i === j ? 'block' : 'none'
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="title">
+        <ul>
+          <li class="current">第一课</li>
+          <li>第二课</li>
+          <li>第三课</li>
+        </ul>
+      </div>
+      <div id="content">
+        <ul style="display:block">
+          <li>网页特效原理分析</li>
+          <li>响应用户操作</li>
+        </ul>
+        <ul>
+          <li>改变网页背景颜色</li>
+          <li>函数传参</li>
+          <li>高重用性函数的编写</li>
+          <li>126邮箱全选效果</li>
+          <li>循环及遍历操作</li>
+        </ul>
+        <ul>
+          <li>JavaScript组成：ECMAScript、DOM、BOM，JavaScript兼容性来源</li>
+          <li>JavaScript出现的位置、优缺点</li>
+          <li>变量、类型、typeof、数据类型转换、变量作用域</li>
+          <li>闭包：什么是闭包、简单应用、闭包缺点</li>
+          <li>运算符：算术、赋值、关系、逻辑、其他运算符</li>
+          <li>程序流程控制：判断、循环、跳出</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
