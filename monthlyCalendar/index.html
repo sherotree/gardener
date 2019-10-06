@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Document</title>
+    <script type="text/javascript">
+      window.onload = function() {
+        let labels = document
+          .getElementById('oneYear')
+          .getElementsByTagName('div')
+        let intros = document
+          .getElementById('introduce')
+          .getElementsByTagName('div')
+        for (let i = 0; i < labels.length; i++) {
+          labels[i].onmousemove = function() {
+            for (let j = 0; j < intros.length; j++) {
+              intros[j].style.display = j === i ? 'block' : 'none'
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="outer">
+      <div id="oneYear">
+        <div>1 <br />JAN</div>
+        <div>2 <br />FER</div>
+        <div>3 <br />MAR</div>
+        <div>4 <br />APR</div>
+        <div>5 <br />MAY</div>
+        <div>6 <br />JUN</div>
+        <div>7 <br />JUL</div>
+        <div>8 <br />AUG</div>
+        <div>9 <br />SEP</div>
+        <div>10 <br />OCT</div>
+        <div>11 <br />NOV</div>
+        <div>12 <br />DEC</div>
+      </div>
+      <div id="introduce">
+        <div style="display:block">
+          1 月节日<br />
+          元旦：1月1日至3日放假三天。
+        </div>
+        <div>
+          2 月节日<br />
+          春节：2月2日至8日放假7天。
+        </div>
+        <div>3 月节日<br />妇女节：3月8日妇女节，与我无关。</div>
+        <div>
+          4 月节日<br />
+          清明节：4月3日至5日放假3天
+        </div>
+        <div>
+          5 月节日<br />
+          劳动节：4月30日至5月2日放假3天。
+        </div>
+        <div>
+          6 月节日<br />
+          端午节：6月4日至6日放假3天。
+        </div>
+        <div>
+          7 月节日<br />
+          小暑：7月7日小暑。不放假。
+        </div>
+        <div>
+          8 月节日<br />
+          七夕节：8月6日七夕节。不放假。
+        </div>
+        <div>
+          9 月节日<br />
+          中秋节：9月10日至12日放假3天。
+        </div>
+        <div>
+          10 月节日<br />
+          国庆节：10月1日至7日放假7天。
+        </div>
+        <div>
+          11 月节日<br />
+          立冬：11月8日立冬。不放假。
+        </div>
+        <div>
+          12 月节日<br />
+          艾滋病日:12月1日 废除奴隶制国际日:12月2日。
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

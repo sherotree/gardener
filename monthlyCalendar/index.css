@@ -1,0 +1,37 @@
+#outer {
+  width: 300px;
+  background: rgb(204, 202, 202);
+  margin: 40px auto;
+  padding: 10px;
+}
+
+#oneYear,
+#introduce {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#oneYear div {
+  width: 58px;
+  background: black;
+  color: white;
+  margin: 10px 5px;
+  text-align: center;
+  border: 1px solid black;
+}
+
+#oneYear div:hover {
+  background: white;
+  color: red;
+}
+
+#introduce {
+  border: 1px solid white;
+  margin: 10px;
+  padding: 10px;
+  background: rgb(236, 234, 234);
+}
+#introduce div {
+  display: none;
+}
