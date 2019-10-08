@@ -1,0 +1,31 @@
+#outer {
+  margin: 30px auto;
+  text-align: center;
+  width: 560px;
+  border: 1px solid black;
+  padding-left: 10px;
+}
+
+#images ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  justify-content: space-between;
+}
+
+#images img {
+  visibility: hidden;
+  position: relative;
+  top: -80px;
+  left: -10px;
+}
+
+li {
+  list-style-type: none;
+  width: 100px;
+  height: 80px;
+  border: 1px solid black;
+  margin-right: 10px;
+  margin-top: 10px;
+  position: relative;
+}

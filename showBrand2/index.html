@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <script type="text/javascript">
+      window.onload = function() {
+        let images = document.getElementsByTagName('img')
+        let lists = document.getElementsByTagName('li')
+        for (let i = 0; i < images.length; i++) {
+          lists[i].onmousemove = function() {
+            images[i].style.visibility = 'visible'
+            lists[i].style.visibility = 'hidden'
+          }
+          lists[i].onmouseout = function() {
+            images[i].style.visibility = 'hidden'
+            lists[i].style.visibility = 'visible'
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="outer">
+      <h2>名车车标展示-鼠标移过显示车标</h2>
+      <div id="images">
+        <ul>
+          <li>
+            <strong>BMW</strong><br />宝马<img src="images/1.jpg" alt="" />
+          </li>
+          <li>
+            <strong>Alfa Romeo</strong><br />
+            阿尔法-罗米欧<img src="images/2.jpg" alt="" />
+          </li>
+          <li>
+            <strong>Skoda</strong><br />
+            斯柯达<img src="images/3.jpg" alt="" />
+          </li>
+          <li>
+            <strong>Volkswagen</strong><br />
+            大众汽车<img src="images/4.jpg" alt="" />
+          </li>
+          <li>
+            <strong>Saab</strong><br />
+            萨布牌轿车<img src="images/5.jpg" alt="" />
+          </li>
+          <li>
+            <strong>Lamborghini</strong><br />
+            兰博基尼<img src="images/6.jpg" alt="" />
+          </li>
+          <li>
+            <strong>Porsche</strong><br />
+            保时捷<img src="images/7.jpg" alt="" />
+          </li>
+          <li>
+            <strong>Peugeot</strong><br />
+            标致<img src="images/8.jpg" alt="" />
+          </li>
+          <li>
+            <strong>Mercedes1</strong><br />
+            梅赛德斯 奔驰<img src="images/9.jpg" alt="" />
+          </li>
+          <li>
+            <strong>Buick</strong><br />
+            别克汽车<img src="images/10.jpg" alt="" />
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
